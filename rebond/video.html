@@ -1,0 +1,81 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>REBOND</title>
+<meta name="description" content="L'IA ne vous demandera pas votre avis. Dictez vos devis, relances et courriels : gratuit, sans compte.">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="REBOND — L'IA ne vous demandera pas votre avis.">
+<meta property="og:description" content="Dictez votre devis au téléphone, il sort prêt à envoyer. Gratuit, sans compte.">
+<meta property="og:url" content="https://rebond-ia.netlify.app/video/">
+<meta property="og:image" content="https://rebond-ia.netlify.app/og.png">
+<meta property="og:video" content="https://rebond-ia.netlify.app/rebond.mp4">
+<meta property="og:video:type" content="video/mp4"><meta property="og:video:width" content="1080"><meta property="og:video:height" content="1920">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://rebond-ia.netlify.app/og.png">
+<link rel="canonical" href="https://rebond-ia.netlify.app/video/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Page pub : la vidéo au centre, un seul bouton vers l'appli. Couleurs reprises de la vidéo. */
+:root{--top:#14214f;--mid:#2c3f8f;--low:#7a63b0;--sun:#f08a3c;--ink:#fff;--ink2:#dfe3f3;--cta:#ff6a1f;--ctaInk:#fff;
+--display:"Barlow Condensed","Arial Narrow",sans-serif;--body:"IBM Plex Sans",Helvetica,Arial,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:linear-gradient(180deg,var(--top) 0%,var(--mid) 40%,var(--low) 72%,var(--sun) 100%);background-attachment:fixed;color:var(--ink);font-family:var(--body);min-height:100dvh}
+.wrap{max-width:1040px;margin:0 auto;padding:max(16px,env(safe-area-inset-top)) 16px 28px;display:grid;gap:28px;align-items:center;grid-template-columns:1fr;min-height:100dvh}
+@media (min-width:860px){.wrap{grid-template-columns:auto 1fr;gap:56px}}
+.vid{justify-self:center;position:relative;width:min(100%,calc(78dvh * 9 / 16));aspect-ratio:9/16;border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);background:#0b1230}
+.vid video{width:100%;height:100%;object-fit:cover;display:block}
+.txt{display:flex;flex-direction:column;gap:18px;text-align:center}
+@media (min-width:860px){.txt{text-align:left}}
+.brand{font-family:var(--display);font-weight:800;letter-spacing:.14em;font-size:1rem;opacity:.85}
+h1{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.4rem,7vw,4.4rem);line-height:.95;margin:0;text-wrap:balance}
+.sub{font-size:1.1rem;line-height:1.5;color:var(--ink2);margin:0;max-width:34em}
+@media (max-width:859px){.sub{margin-inline:auto}}
+ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:1rem}
+@media (max-width:859px){ul{justify-items:center}}
+li::before{content:"✓ ";color:var(--sun);font-weight:700}
+.cta{display:inline-block;justify-self:center;align-self:center;background:var(--cta);color:var(--ctaInk);text-decoration:none;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:1.6rem;padding:16px 30px;border-radius:14px;box-shadow:0 10px 26px rgba(255,106,31,.45)}
+@media (min-width:860px){.cta{align-self:flex-start}}
+.cta:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.small{font-size:.85rem;color:var(--ink2)}
+footer{grid-column:1/-1;text-align:center;font-size:.8rem}
+@media (max-width:859px){
+ .wrap{padding-bottom:110px;gap:20px}
+ .vid{width:min(100%,calc(62dvh * 9 / 16))}
+ h1{display:none}
+ .brand{display:none}
+ .cta{position:fixed;left:16px;right:16px;bottom:max(14px,env(safe-area-inset-bottom));text-align:center;z-index:5}
+}
+footer a{color:var(--ink2)}
+</style></head><body>
+<main class="wrap">
+  <div class="vid">
+    <video id="v" src="/rebond.mp4" poster="/video-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+  </div>
+  <section class="txt">
+    <div class="brand">REBOND</div>
+    <h1 data-k="h">L'IA ne vous demandera pas votre avis.</h1>
+    <p class="sub" data-k="s">Vos concurrents l'utilisent déjà. Dictez votre devis au téléphone : il sort rédigé, prêt à envoyer. Vous relisez, rien ne part sans vous.</p>
+    <ul><li data-k="l1">Devis, relances de factures, courriels</li><li data-k="l2">Salarié : votre métier face à l'IA, tâche par tâche</li><li data-k="l3">8 langues, à la voix</li></ul>
+    <a class="cta" id="cta" href="/" data-k="c">Essayer gratuitement</a>
+    <p class="small" data-k="n">Sans compte. Sans carte bancaire.</p>
+  </section>
+  <footer><a href="/mentions-legales.html" data-k="m">Mentions légales</a></footer>
+</main>
+<script>
+// Langue : #xx dans le lien, sinon langue du navigateur. Le bouton ouvre l'appli dans la même langue.
+const T={
+de:{h:"Die KI fragt Sie nicht nach Ihrer Meinung.",s:"Ihre Konkurrenz nutzt sie schon. Diktieren Sie Ihr Angebot ins Handy: Es kommt fertig formuliert und versandbereit heraus. Sie lesen gegen, nichts geht ohne Sie raus.",l1:"Angebote, Zahlungserinnerungen, E-Mails",l2:"Angestellte: Ihr Beruf und die KI, Aufgabe für Aufgabe",l3:"8 Sprachen, per Sprache",c:"Kostenlos testen",n:"Ohne Konto. Ohne Kreditkarte.",m:"Impressum"},
+en:{h:"AI won't ask for your opinion.",s:"Your competitors already use it. Dictate your quote on your phone: it comes out written and ready to send. You review it, nothing goes out without you.",l1:"Quotes, payment reminders, emails",l2:"Employees: your job versus AI, task by task",l3:"8 languages, by voice",c:"Try it free",n:"No account. No credit card.",m:"Legal notice"},
+nl:{h:"AI vraagt niet om uw mening.",s:"Uw concurrenten gebruiken het al. Dicteer uw offerte op uw telefoon: ze komt uitgeschreven en klaar om te versturen. U leest na, niets vertrekt zonder u.",l1:"Offertes, betalingsherinneringen, e-mails",l2:"Werknemers: uw beroep tegenover AI, taak per taak",l3:"8 talen, met de stem",c:"Gratis proberen",n:"Zonder account. Zonder creditcard.",m:"Wettelijke vermeldingen"},
+pt:{h:"A IA não vai pedir a sua opinião.",s:"Os seus concorrentes já a usam. Dite o seu orçamento ao telemóvel: sai redigido e pronto a enviar. Você revê, nada sai sem si.",l1:"Orçamentos, lembretes de faturas, e-mails",l2:"Assalariados: a sua profissão face à IA, tarefa a tarefa",l3:"8 línguas, por voz",c:"Experimentar grátis",n:"Sem conta. Sem cartão bancário.",m:"Aviso legal"},
+lb:{h:"D'KI freet Iech net no Ärer Meenung.",s:"Är Konkurrenz benotzt se schonn. Diktéiert Ären Devis an den Handy: e kënnt fäerdeg geschriwwen eraus, prett fir ze schécken. Dir liest nach, näischt geet ouni Iech eraus.",l1:"Devisen, Rappelle fir Rechnungen, E-Mailen",l2:"Salariéen: Äre Beruff an d'KI, Aufgab fir Aufgab",l3:"8 Sproochen, mat der Stëmm",c:"Gratis probéieren",n:"Ouni Kont. Ouni Kreditkaart.",m:"Mentions légales"},
+it:{h:"L'IA non vi chiederà il vostro parere.",s:"I vostri concorrenti la usano già. Dettate il preventivo al telefono: esce redatto e pronto da inviare. Voi rileggete, nulla parte senza di voi.",l1:"Preventivi, solleciti di fatture, e-mail",l2:"Dipendenti: il vostro mestiere di fronte all'IA, compito per compito",l3:"8 lingue, a voce",c:"Provate gratis",n:"Senza account. Senza carta.",m:"Note legali"},
+es:{h:"La IA no le pedirá su opinión.",s:"Sus competidores ya la usan. Dicte su presupuesto al teléfono: sale redactado y listo para enviar. Usted revisa, nada sale sin usted.",l1:"Presupuestos, recordatorios de facturas, correos",l2:"Asalariados: su oficio frente a la IA, tarea por tarea",l3:"8 idiomas, por voz",c:"Probar gratis",n:"Sin cuenta. Sin tarjeta.",m:"Aviso legal"}};
+const h=(location.hash||"").slice(1).toLowerCase();
+const nav=(navigator.languages||[navigator.language||"fr"]).map(l=>String(l).slice(0,2).toLowerCase());
+const lang=T[h]||h==="fr"?h:(nav.find(l=>T[l]||l==="fr")||"fr");
+if(T[lang]){document.documentElement.lang=lang;document.querySelectorAll("[data-k]").forEach(e=>{const t=T[lang][e.dataset.k];if(t)e.textContent=t;});}
+document.getElementById("cta").href="/#"+lang;
+// Compteur anonyme : une visite de la page pub (même compteur que l'appli).
+try{fetch("https://sccdpqlohylgfhrooqoo.supabase.co/functions/v1/rebond/track",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({ev:"visite",lang,detail:"page_pub",sid:"pub-"+Math.random().toString(36).slice(2,10)})});}catch(e){}
+</script>
+</body></html>
