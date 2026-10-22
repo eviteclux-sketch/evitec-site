@@ -1,0 +1,31 @@
+# Télécharge les photos Unsplash listées dans rebond/img/candidats.txt (le conteneur de travail n'a pas accès à Unsplash).
+name: rebond-images
+on:
+  push:
+    branches: [rebond-src]
+    paths: [rebond/img/candidats.txt]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Télécharger
+        run: |
+          mkdir -p rebond/img/cand
+          while read -r id; do
+            [ -z "$id" ] && continue
+            f="rebond/img/cand/$id.jpg"
+            code=$(curl -sL -o "$f" -w '%{http_code} %{content_type}' "https://unsplash.com/photos/$id/download?w=1600&fm=jpg&q=72")
+            echo "$id $code"
+            case "$code" in *image*) ;; *) rm -f "$f";; esac
+          done < rebond/img/candidats.txt
+          ls -la rebond/img/cand
+      - name: Commit
+        run: |
+          git config user.name "rebond-bot"; git config user.email "rebond-bot@users.noreply.github.com"
+          git add rebond/img/cand
+          git commit -m "Photos candidates" || echo rien
+          git push
