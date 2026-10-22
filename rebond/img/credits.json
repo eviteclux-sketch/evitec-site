@@ -1,0 +1,44 @@
+{
+ "hero": {
+  "titre": "File:Flickr - Official U.S. Navy Imagery - Construction workers assemble bleacher scaffolding..jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_Official_U.S._Navy_Imagery_-_Construction_workers_assemble_bleacher_scaffolding..jpg",
+  "licence": "Public domain",
+  "auteur": "Official Navy Page from United States of America\n\nMCSN Rob Aylward/U.S. Navy"
+ },
+ "porte-ent": {
+  "titre": "File:L-14-06-05-A.098- A Clark Construction worker models a properly-fitted safety harness at the National Museum of African American History stand down in Washington, D.C. (14352037252).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:L-14-06-05-A.098-_A_Clark_Construction_worker_models_a_properly-fitted_safety_harness_at_the_National_Museum_of_African_American_History_stand_down_in_Washington,_D.C._(14352037252).jpg",
+  "licence": "Public domain",
+  "auteur": "US Department of Labor"
+ },
+ "porte-sal": {
+  "titre": "File:Residential fall protection (9256420116).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Residential_fall_protection_(9256420116).jpg",
+  "licence": "Public domain",
+  "auteur": "National Institute for Occupational Safety and Health (NIOSH) from USA"
+ },
+ "securite": {
+  "titre": "File:Residential construction fall arrest system (9256413286).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Residential_construction_fall_arrest_system_(9256413286).jpg",
+  "licence": "Public domain",
+  "auteur": "National Institute for Occupational Safety and Health (NIOSH) from USA"
+ },
+ "detachement": {
+  "titre": "File:Construction worker on scaffolding during Mountbatten House redevelopment, Chatham, Kent.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Construction_worker_on_scaffolding_during_Mountbatten_House_redevelopment,_Chatham,_Kent.jpg",
+  "licence": "CC0",
+  "auteur": "OathOn"
+ },
+ "cout": {
+  "titre": "File:Bricklayer at work.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Bricklayer_at_work.jpg",
+  "licence": "CC BY-SA 4.0",
+  "auteur": "Okhaifo"
+ },
+ "penurie": {
+  "titre": "File:FEMA - 44634 - Roofer working on a home in Oklahoma.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:FEMA_-_44634_-_Roofer_working_on_a_home_in_Oklahoma.jpg",
+  "licence": "Public domain",
+  "auteur": "Patsy Lynch"
+ }
+}
