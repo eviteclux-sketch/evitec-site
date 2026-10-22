@@ -3,7 +3,7 @@ name: rebond-images
 on:
   push:
     branches: [rebond-src]
-    paths: [rebond/img/candidats.txt]
+    paths: [rebond/img/candidats.txt, rebond/img/requetes.json]
   workflow_dispatch:
 permissions:
   contents: write
@@ -12,23 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Télécharger
-        run: |
-          mkdir -p rebond/img/cand
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
-          : > rebond/img/log.txt
-          while read -r id; do
-            case "$id" in ""|\#*) continue;; esac
-            f="rebond/img/cand/$id.jpg"
-            page=$(curl -sL -A "$UA" "https://unsplash.com/photos/$id" || true)
-            og=$(printf '%s' "$page" | grep -oE 'https://(images|plus)\.unsplash\.com/[^"?]+' | head -1 || true)
-            plus=$(printf '%s' "$page" | grep -c 'Unsplash+' || true)
-            if [ -n "$og" ]; then
-              code=$(curl -sL -A "$UA" -o "$f" -w '%{http_code} %{content_type}' "$og?w=1600&q=72&fm=jpg&fit=max" || echo erreur)
-            else code="pas_trouve"; fi
-            echo "$id | $og | $code | plus=$plus" | tee -a rebond/img/log.txt
-            case "$code" in *image*) ;; *) rm -f "$f";; esac
-          done < rebond/img/candidats.txt
+      - name: Télécharger (Wikimedia Commons)
+        run: python3 rebond/img/commons.py
       - name: Commit
         run: |
           git config user.name "rebond-bot"; git config user.email "rebond-bot@users.noreply.github.com"
