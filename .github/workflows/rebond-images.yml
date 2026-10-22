@@ -18,13 +18,13 @@ jobs:
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
           : > rebond/img/log.txt
           while read -r id; do
-            [ -z "$id" ] && continue
+            case "$id" in ""|\#*) continue;; esac
             f="rebond/img/cand/$id.jpg"
-            page=$(curl -sL -A "$UA" "https://unsplash.com/photos/$id")
-            og=$(printf '%s' "$page" | grep -oE 'https://(images|plus)\.unsplash\.com/[^"?]+' | head -1)
+            page=$(curl -sL -A "$UA" "https://unsplash.com/photos/$id" || true)
+            og=$(printf '%s' "$page" | grep -oE 'https://(images|plus)\.unsplash\.com/[^"?]+' | head -1 || true)
             plus=$(printf '%s' "$page" | grep -c 'Unsplash+' || true)
             if [ -n "$og" ]; then
-              code=$(curl -sL -A "$UA" -o "$f" -w '%{http_code} %{content_type}' "$og?w=1600&q=72&fm=jpg&fit=max")
+              code=$(curl -sL -A "$UA" -o "$f" -w '%{http_code} %{content_type}' "$og?w=1600&q=72&fm=jpg&fit=max" || echo erreur)
             else code="pas_trouve"; fi
             echo "$id | $og | $code | plus=$plus" | tee -a rebond/img/log.txt
             case "$code" in *image*) ;; *) rm -f "$f";; esac
