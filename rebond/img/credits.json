@@ -40,5 +40,53 @@
   "page": "https://commons.wikimedia.org/wiki/File:FEMA_-_44634_-_Roofer_working_on_a_home_in_Oklahoma.jpg",
   "licence": "Public domain",
   "auteur": "Patsy Lynch"
+ },
+ "m-compta": {
+  "titre": "File:FNV Belastingservice.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:FNV_Belastingservice.JPG",
+  "licence": "CC BY 3.0",
+  "auteur": "S.J. de Waard"
+ },
+ "m-bureau": {
+  "titre": "File:Bookmark-inside-office.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Bookmark-inside-office.jpg",
+  "licence": "CC BY-SA 4.0",
+  "auteur": "Bookmark Content"
+ },
+ "m-client": {
+  "titre": "File:Southern California Employees (20230210-FS-PJK-448).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Southern_California_Employees_(20230210-FS-PJK-448).jpg",
+  "licence": "Public domain",
+  "auteur": "Forest Service Photography"
+ },
+ "m-banque": {
+  "titre": "File:Bank Muamalat.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Bank_Muamalat.JPG",
+  "licence": "CC BY-SA 4.0",
+  "auteur": "Melwinsy"
+ },
+ "m-entrepot": {
+  "titre": "File:Camp Darby Humanitarian Assistance Program responds to Ukraine needs (5153318).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Camp_Darby_Humanitarian_Assistance_Program_responds_to_Ukraine_needs_(5153318).jpg",
+  "licence": "Public domain",
+  "auteur": "U.S. Army USAG-V by Chiara Mattirolo"
+ },
+ "m-camion": {
+  "titre": "File:NCDOT-Mack-dump-truck-20110706-5958117410.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:NCDOT-Mack-dump-truck-20110706-5958117410.jpg",
+  "licence": "CC BY 2.0",
+  "auteur": "NCDOTcommunications"
+ },
+ "porte-ent2": {
+  "titre": "File:FNV Belastingservice aan het werk in Leiden.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:FNV_Belastingservice_aan_het_werk_in_Leiden.JPG",
+  "licence": "CC BY-SA 3.0",
+  "auteur": "S.J. de Waard"
+ },
+ "porte-sal2": {
+  "titre": "File:Southern California Employees (20230210-FS-PJK-423).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Southern_California_Employees_(20230210-FS-PJK-423).jpg",
+  "licence": "Public domain",
+  "auteur": "Forest Service Photography"
  }
 }
