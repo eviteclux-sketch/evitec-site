@@ -6,16 +6,16 @@
   "auteur": "Official Navy Page from United States of America\n\nMCSN Rob Aylward/U.S. Navy"
  },
  "porte-ent": {
-  "titre": "File:L-14-06-05-A.098- A Clark Construction worker models a properly-fitted safety harness at the National Museum of African American History stand down in Washington, D.C. (14352037252).jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:L-14-06-05-A.098-_A_Clark_Construction_worker_models_a_properly-fitted_safety_harness_at_the_National_Museum_of_African_American_History_stand_down_in_Washington,_D.C._(14352037252).jpg",
-  "licence": "Public domain",
-  "auteur": "US Department of Labor"
+  "titre": "File:FNV Belastingservice.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:FNV_Belastingservice.JPG",
+  "licence": "CC BY 3.0",
+  "auteur": "S.J. de Waard"
  },
  "porte-sal": {
-  "titre": "File:Residential fall protection (9256420116).jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Residential_fall_protection_(9256420116).jpg",
+  "titre": "File:Southern California Employees (20230210-FS-PJK-423).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Southern_California_Employees_(20230210-FS-PJK-423).jpg",
   "licence": "Public domain",
-  "auteur": "National Institute for Occupational Safety and Health (NIOSH) from USA"
+  "auteur": "Forest Service Photography"
  },
  "securite": {
   "titre": "File:Residential construction fall arrest system (9256413286).jpg",
@@ -77,16 +77,10 @@
   "licence": "CC BY 2.0",
   "auteur": "NCDOTcommunications"
  },
- "porte-ent2": {
+ "m-impots": {
   "titre": "File:FNV Belastingservice aan het werk in Leiden.JPG",
   "page": "https://commons.wikimedia.org/wiki/File:FNV_Belastingservice_aan_het_werk_in_Leiden.JPG",
   "licence": "CC BY-SA 3.0",
   "auteur": "S.J. de Waard"
- },
- "porte-sal2": {
-  "titre": "File:Southern California Employees (20230210-FS-PJK-423).jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Southern_California_Employees_(20230210-FS-PJK-423).jpg",
-  "licence": "Public domain",
-  "auteur": "Forest Service Photography"
  }
 }
